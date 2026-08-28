@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aber &amp; Oliver Midwifery Care | Pregnancy, Birth &amp; Nursing Support</title>
+<meta name="description" content="Willow & Wren Midwifery Care offers prenatal, labor, postpartum, newborn, and bedside nursing support with warmth and expertise.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Aber & Oliver Midwifery Care">
+<meta property="og:description" content="Compassionate care, from the first flutter to the fourth trimester.">
+<meta property="og:type" content="website">
+
+<style>
+  /* ===== RESET & BASE ===== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #faf8f6;
+    color: #1e1e2a;
+    line-height: 1.6;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* ===== REUSABLE ===== */
+  .btn {
+    display: inline-block;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+
+  .btn-primary {
+    background: #f4a6a6;
+    color: #1a1a2e;
+  }
+  .btn-primary:hover {
+    background: #e08a8a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(244, 166, 166, 0.3);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+  }
+
+  .btn-small {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .btn-large {
+    padding: 1rem 2.8rem;
+    font-size: 1.1rem;
+  }
+
+  .eyebrow {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #f4a6a6;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-head {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+  }
+  .section-head h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #1e1e2a;
+  }
+  .section-head .section-sub {
+    color: #5a5a6e;
+    margin-top: 0.5rem;
+  }
+
+  /* ===== HEADER ===== */
+  .site-header {
+    background: #1a1a2e;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #fff;
+  }
+  .logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #f4a6a6;
+  }
+  .logo-text {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+  .logo-text small {
+    font-size: 0.7rem;
+    font-weight: 400;
+    opacity: 0.8;
+    display: block;
+  }
+
+  .main-nav {
+    display: flex;
+    gap: 1.8rem;
+  }
+  .main-nav a {
+    color: #e0e0e0;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.2s;
+  }
+  .main-nav a:hover {
+    color: #f4a6a6;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 4px;
+  }
+
+  /* ===== HERO – WITH BACKGROUND IMAGE ===== */
+  .hero {
+    background-image: url('assets/hero/155444624632285177.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 5rem 2rem 6rem;
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 0;
+  }
+  .hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content .eyebrow {
+    color: #f4a6a6;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-product {
+    display: block;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .hero-tagline {
+    display: block;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #e0e0e0;
+    margin-top: 0.3rem;
+    font-style: italic;
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin: 1.8rem auto 2.5rem;
+    opacity: 0.9;
+    line-height: 1.7;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    padding: 0.6rem 2rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.2);
+    margin-bottom: 2.5rem;
+    backdrop-filter: blur(4px);
+  }
+  .hero-badge .badge-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f4a6a6;
+    margin-right: 0.6rem;
+  }
+  .hero-badge .badge-label {
+    font-size: 1rem;
+    opacity: 0.8;
+    font-weight: 400;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ===== ABOUT ===== */
+  .about {
+    padding: 5rem 2rem;
+    background: #fff;
+  }
+  .about-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .about-portrait {
+    flex: 1 1 300px;
+  }
+  .about-portrait img {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 100%;
+    height: auto;
+  }
+  .about-copy {
+    flex: 2 1 400px;
+  }
+  .about-copy h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  .about-copy p {
+    color: #3a3a4e;
+    margin-bottom: 1rem;
+  }
+  .credentials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .credentials li {
+    background: #f4f0ed;
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    color: #1e1e2a;
+    font-weight: 500;
+  }
+
+  /* ===== SERVICES – WITH IMAGES ===== */
+  .services {
+    padding: 5rem 2rem;
+    background: #faf8f6;
+  }
+  .services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+  .service-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    transition: 0.3s;
+    overflow: hidden;
+    text-align: left;
+  }
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  }
+  .service-card.featured {
+    border: 2px solid #f4a6a6;
+    background: #fff8f8;
+  }
+  .service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .service-card .card-body {
+    padding: 1.5rem;
+  }
+  .service-card h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .service-card p {
+    color: #5a5a6e;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  .testimonials {
+    padding: 5rem 2rem;
+    background: #fff;
+  }
+  .testimonial-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  blockquote {
+    background: #faf8f6;
+    padding: 2rem;
+    border-radius: 20px;
+    font-style: italic;
+    border-left: 4px solid #f4a6a6;
+  }
+  blockquote p {
+    font-size: 1.05rem;
+    color: #2a2a3e;
+  }
+  blockquote cite {
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    color: #f4a6a6;
+  }
+
+  /* ===== GALLERY – WITH IMAGES ===== */
+  .gallery {
+    padding: 5rem 2rem;
+    background: #faf8f6;
+  }
+  .gallery-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  .gallery-tile {
+    height: 180px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    background-size: cover;
+    background-position: center;
+    transition: 0.3s;
+  }
+  .gallery-tile:hover {
+    transform: scale(1.02);
+  }
+  .tile-1 { background-image: url('https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'); }
+  .tile-2 { background-image: url('https://images.unsplash.com/photo-1584467541268-b040f83be3fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'); }
+  .tile-3 { background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'); }
+  .tile-4 { background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'); }
+  .tile-5 { background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'); }
+  .tile-6 { background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'); }
+
+  /* ===== CONTACT ===== */
+  .contact {
+    padding: 5rem 2rem;
+    background: #fff;
+  }
+  .contact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+  .contact-info {
+    flex: 1 1 300px;
+  }
+  .contact-info h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2.2rem;
+  }
+  .contact-info p {
+    color: #3a3a4e;
+    margin: 0.8rem 0 1.5rem;
+  }
+  .info-list {
+    list-style: none;
+    padding: 0;
+  }
+  .info-list li {
+    margin-bottom: 0.6rem;
+  }
+  .appointment-social {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .appointment-social span {
+    font-weight: 600;
+    color: #1e1e2a;
+  }
+  .appointment-social a svg {
+    width: 28px;
+    height: 28px;
+    fill: #1e1e2a;
+    transition: 0.2s;
+  }
+  .appointment-social a:hover svg {
+    fill: #f4a6a6;
+  }
+
+  .contact-form {
+    flex: 1 1 350px;
+    background: #faf8f6;
+    padding: 2rem;
+    border-radius: 24px;
+  }
+  .contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-top: 0.3rem;
+    font-family: inherit;
+  }
+  .contact-form button {
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+
+  /* ===== FOOTER ===== */
+  .site-footer {
+    background: #1a1a2e;
+    color: #ccc;
+    padding: 3rem 2rem 1.5rem;
+  }
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2.5rem;
+  }
+  .footer-brand .logo {
+    color: #fff;
+    margin-bottom: 0.8rem;
+  }
+  .footer-brand p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  .footer-links h4,
+  .footer-contact h4,
+  .footer-social h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .footer-links a {
+    display: block;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    transition: 0.2s;
+  }
+  .footer-links a:hover {
+    color: #f4a6a6;
+  }
+  .footer-contact p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  .footer-contact-link {
+    display: inline-block;
+    margin-top: 0.8rem;
+    color: #f4a6a6;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+  }
+  .footer-contact-link:hover {
+    border-bottom-color: #f4a6a6;
+  }
+  .footer-social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  .footer-social-links a svg {
+    width: 28px;
+    height: 28px;
+    fill: #ccc;
+    transition: 0.2s;
+  }
+  .footer-social-links a:hover svg {
+    fill: #f4a6a6;
+  }
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #1a1a2e;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+    .main-nav.open {
+      display: flex;
+    }
+    .nav-toggle {
+      display: flex;
+    }
+    .header-actions .btn-small {
+      display: none;
+    }
+
+    .hero-product {
+      font-size: 3rem;
+    }
+    .hero-tagline {
+      font-size: 1.5rem;
+    }
+    .hero-description {
+      font-size: 1rem;
+    }
+    .hero-badge .badge-price {
+      font-size: 1.5rem;
+    }
+
+    .about-inner {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .contact-inner {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 3rem 1rem 4rem;
+    }
+    .hero-product {
+      font-size: 2.4rem;
+    }
+    .hero-tagline {
+      font-size: 1.2rem;
+    }
+    .hero-actions .btn {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#home" class="logo">
+      <!-- Replace this SVG with your own logo image -->
+      <img src="data:image/svg+xml,%3Csvg xmlns='/assets/hero/155444624632285177.jpg' width='45' height='45' viewBox='0 0 45 45'%3E%3Ccircle cx='22.5' cy='22.5' r='22.5' fill='%23f4a6a6'/%3E%3Ctext x='50%25' y='55%25' font-family='sans-serif' font-size='22' fill='%231a1a2e' text-anchor='middle' dy='.35em'%3EAO%3C/text%3E%3C/svg%3E" alt="Aber Oliver logo" class="logo-photo">
+      <span class="logo-text">Aber Oliver<br><small>Midwifery Care</small></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#about">About</a>
+      <a href="education.html">Education</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Stories</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#contact" class="btn btn-primary btn-small">Book a Consultation</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO – with your photo as background ===== -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <p class="eyebrow">Oliver Midwifery &amp; Nursing</p>
+      <h1>
+        <span class="hero-product">Compassionate Care</span>
+        <span class="hero-tagline">from pregnancy postnatal care</span>
+      </h1>
+      <p class="hero-description">
+        Evidence based prenatal, birth, postpartum and bedside nursing <br>
+        all in the comfort of your home.
+      </p>
+      <div class="hero-badge">
+        <span class="badge-price">Free</span>
+        <span class="badge-label">20min consultation</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary btn-large">Book Now</a>
+        <a href="#services" class="btn btn-ghost btn-large">Explore Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-portrait">
+      <!-- Replace with your own photo -->
+      <img src="/assets/hero/hero 1.png" class="portrait-image">
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow">About My Journey</p>
+      <h2>Hello, I'm Oliver</h2>
+      <p>
+        I've spent the last two years supporting families through
+        pregnancy, birth, and the tender months that follow. My approach
+        blends clinical training with unhurried, personal care  I believe
+        every birth story deserves patience, informed choices, and a steady
+        hand to hold.
+      </p>
+      <p>
+        Alongside midwifery, I offer bedside nursing care for mothers and
+        newborns who need extra support at home during recovery, so healing
+        can happen in familiar, comfortable surroundings.
+      </p>
+      <ul class="credentials">
+        <li>Certified Midwife (CM), ACNM Board Certified</li>
+        <li>Cardio Pulmonary Resuscitation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES – now with images ===== -->
+<section class="services" id="services">
+  <div class="section-head">
+    <p class="eyebrow">Services</p>
+    <h2>Care that follows your journey</h2>
+    <p class="section-sub">Every stage of care connects to the next from your first appointment through recovery at home.</p>
+  </div>
+
+  <div class="services-grid">
+    <!-- Prenatal Care -->
+    <article class="service-card">
+      <img src="/assets/services/parental care.jpg" alt="Prenatal care">
+      <div class="card-body">
+        <h3>Prenatal Care</h3>
+        <p>Regular checkups, screenings, and unhurried conversations to track your health and your baby's growth.</p>
+      </div>
+    </article>
+
+    <!-- Labor & Delivery -->
+    <article class="service-card">
+      <img src="/assets/services/In the labour room.jpg" alt="Labor and delivery">
+      <div class="card-body">
+        <h3>Labor &amp; Delivery Support</h3>
+        <p>Hands-on support during labor at home, birth center, or hospital helping you feel informed and in control.</p>
+      </div>
+    </article>
+
+    <!-- Postpartum -->
+    <article class="service-card">
+      <img src="/assets/services/postpartum.jpg" alt="Postpartum recovery">
+      <div class="card-body">
+        <h3>Postpartum Recovery Care</h3>
+        <p>Home visits and check-ins through the fourth trimester, supporting your physical and emotional healing.</p>
+      </div>
+    </article>
+
+    <!-- Newborn & Lactation -->
+    <article class="service-card">
+      <img src="/assets/services/newborn.jpg" alt="Newborn care">
+      <div class="card-body">
+        <h3>Newborn &amp; Lactation Support</h3>
+        <p>Newborn wellness checks plus breastfeeding and feeding guidance from a certified lactation consultant.</p>
+      </div>
+    </article>
+
+    <!-- Bedside Nursing (featured) -->
+    <article class="service-card featured">
+      <img src="" alt="Bedside nursing care at home">
+      <div class="card-body">
+        <h3>Bedside Nursing Care</h3>
+        <p>In-home nursing support for mothers and newborns — wound care, vitals monitoring, medication support, and recovery care delivered right where you're most comfortable: home.</p>
+      </div>
+    </article>
+
+    <!-- Family Planning -->
+    <article class="service-card">
+      <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Family planning">
+      <div class="card-body">
+        <h3>Family Planning &amp; Reproductive Health</h3>
+        <p>Confidential counseling on contraception, fertility, and reproductive wellness at every life stage.</p>
+      </div>
+    </article>
+
+    <!-- Education Classes -->
+    <article class="service-card">
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Prenatal education">
+      <div class="card-body">
+        <h3>Prenatal Education Classes</h3>
+        <p>Small-group workshops on childbirth, newborn care, and early breastfeeding to help you feel ready.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials" id="testimonials">
+  <div class="section-head">
+    <p class="eyebrow">Families We've Cared For</p>
+    <h2>Stories from the journey</h2>
+  </div>
+  <div class="testimonial-grid">
+    <blockquote>
+      <p>Oliver sat with us for hours during a long labor and never once made us feel rushed. She caught our daughter with such calm hands.</p>
+      <cite>R. &amp; J</cite>
+    </blockquote>
+    <blockquote>
+      <p>After my C-section, the bedside nursing visits at home made recovery so much easier. I felt cared for, not just checked on.</p>
+      <cite> M. T., postpartum client</cite>
+    </blockquote>
+    <blockquote>
+      <p>The prenatal classes gave us real confidence going into birth. Oliver explains everything without any judgment.</p>
+      <cite>S. &amp; K., second pregnancy</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ===== GALLERY – now with images ===== -->
+<section class="gallery" id="gallery">
+  <div class="section-head">
+    <p class="eyebrow">Gallery</p>
+    <h2>Moments from the practice</h2>
+    <p class="section-sub">Real moments – swap these images with your own.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-tile tile-1"><span>Birth Center</span></div>
+    <div class="gallery-tile tile-2"><span>Prenatal Visit</span></div>
+    <div class="gallery-tile tile-3"><span>Home Nursing Visit</span></div>
+    <div class="gallery-tile tile-4"><span>Newborn Care</span></div>
+    <div class="gallery-tile tile-5"><span>Education Class</span></div>
+    <div class="gallery-tile tile-6"><span>Postpartum Support</span></div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <p class="eyebrow">Get In Touch</p>
+      <h2>Let's talk about your care</h2>
+      <p>Reach out for a free 20-minute consultation. I respond to all inquiries within one business day.</p>
+
+      <ul class="info-list">
+        <li><strong>Phone:</strong> 0769090173</li>
+        <li><strong>Email:</strong> your gmail.com</li>
+        <li><strong>Office:</strong> Online Service delivery</li>
+        <li><strong>Hours:</strong> Mon–Fri, 9am–5pm · On-call 24/7 for active clients</li>
+      </ul>
+
+      <div class="appointment-social" aria-label="Follow Aber Oliver on social media">
+        <span>Follow me</span>
+        <a href="https://www.tiktok.com/@lia...48558?_r=1&amp;_t=ZS-99GLXJQwHdX" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 3c.4 2.3 2 3.9 4.3 4.1v2.7c-1.5 0-2.9-.5-4.1-1.4v6.6a5.4 5.4 0 1 1-4.6-5.3v2.8a2.6 2.6 0 1 0 2 2.5V3h2.4z"/></svg></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.5 8.5H3.2V21h3.3V8.5zM4.85 3A1.95 1.95 0 1 0 4.9 6.9 1.95 1.95 0 0 0 4.85 3zM21 13.8c0-3.8-2-5.6-4.7-5.6-2.2 0-3.2 1.2-3.7 2v-1.7H9.3V21h3.3v-6.2c0-1.6.3-3.2 2.3-3.2 2 0 2 1.9 2 3.3V21H21v-7.2z"/></svg></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.1 2h9.8A5.1 5.1 0 0 1 22 7.1v9.8a5.1 5.1 0 0 1-5.1 5.1H7.1A5.1 5.1 0 0 1 2 16.9V7.1A5.1 5.1 0 0 1 7.1 2zm-.2 2A2.9 2.9 0 0 0 4 6.9v10.2A2.9 2.9 0 0 0 6.9 20h10.2a2.9 2.9 0 0 0 2.9-2.9V6.9A2.9 2.9 0 0 0 17.1 4H6.9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg></a>
+        <a href="https://wa.me/256769090173" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.7 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 6.9 12l-.4.6.8 2.5-2.6-.7-.6.3A8 8 0 1 1 12 4zm-3 3.5c-.3 0-.6.1-.8.4-.2.2-.8.8-.8 2s.8 2.3 1 2.6c.2.3 1.7 2.8 4.2 3.8 2.1.8 2.5.7 2.9.7.4 0 1.3-.5 1.5-.9.2-.4.2-.8.1-.9-.1-.1-.3-.2-.7-.4l-1.1-.5c-.3-.1-.5-.2-.7.2l-.5.7c-.2.2-.3.3-.6.1a6.5 6.5 0 0 1-1.9-1.2 7.4 7.4 0 0 1-1.3-1.6c-.1-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.1-.5l-.5-1.2c-.1-.4-.3-.7-.7-.7z"/></svg></a>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <label>Full Name <input type="text" name="name" required></label>
+      <label>Email <input type="email" name="email" required></label>
+      <label>Phone <input type="tel" name="phone"></label>
+      <label>How can I help? <textarea name="message" rows="4" required></textarea></label>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <p class="form-status" id="formStatus" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#home" class="logo">
+        <img src="data:image/svg+xml,%3Csvg xmlns='/assets/hero/hero 2.png' width='45' height='45' viewBox='0 0 45 45'%3E%3Ccircle cx='22.5' cy='22.5' r='22.5' fill='%23f4a6a6'/%3E%3Ctext x='50%25' y='55%25' font-family='sans-serif' font-size='22' fill='%231a1a2e' text-anchor='middle' dy='.35em'%3EAO%3C/text%3E%3C/svg%3E" alt="" class="logo-photo">
+        <span class="logo-text">Aber Oliver<br><small>Midwifery Care</small></span>
+      </a>
+      <p>Compassionate, personalized support through pregnanc/y, birth, and postpartum recovery.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-contact">
+      <h4>Get in touch</h4>
+      <p>Available online for consultations and care support.</p>
+      <a href="#contact" class="footer-contact-link">Book a consultation</a>
+    </div>
+    <div class="footer-social">
+      <h4>Follow me</h4>
+      <div class="footer-social-links">
+        <a href="https://www.tiktok.com/@lia...48558?_r=1&amp;_t=ZS-99GLXJQwHdX" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 3c.4 2.3 2 3.9 4.3 4.1v2.7c-1.5 0-2.9-.5-4.1-1.4v6.6a5.4 5.4 0 1 1-4.6-5.3v2.8a2.6 2.6 0 1 0 2 2.5V3h2.4z"/></svg></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.5 8.5H3.2V21h3.3V8.5zM4.85 3A1.95 1.95 0 1 0 4.9 6.9 1.95 1.95 0 0 0 4.85 3zM21 13.8c0-3.8-2-5.6-4.7-5.6-2.2 0-3.2 1.2-3.7 2v-1.7H9.3V21h3.3v-6.2c0-1.6.3-3.2 2.3-3.2 2 0 2 1.9 2 3.3V21H21v-7.2z"/></svg></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.1 2h9.8A5.1 5.1 0 0 1 22 7.1v9.8a5.1 5.1 0 0 1-5.1 5.1H7.1A5.1 5.1 0 0 1 2 16.9V7.1A5.1 5.1 0 0 1 7.1 2zm-.2 2A2.9 2.9 0 0 0 4 6.9v10.2A2.9 2.9 0 0 0 6.9 20h10.2a2.9 2.9 0 0 0 2.9-2.9V6.9A2.9 2.9 0 0 0 17.1 4H6.9zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.3-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg></a>
+        <a href="https://wa.me/256769090173" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.7 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 0 1 6.9 12l-.4.6.8 2.5-2.6-.7-.6.3A8 8 0 1 1 12 4zm-3 3.5c-.3 0-.6.1-.8.4-.2.2-.8.8-.8 2s.8 2.3 1 2.6c.2.3 1.7 2.8 4.2 3.8 2.1.8 2.5.7 2.9.7.4 0 1.3-.5 1.5-.9.2-.4.2-.8.1-.9-.1-.1-.3-.2-.7-.4l-1.1-.5c-.3-.1-.5-.2-.7.2l-.5.7c-.2.2-.3.3-.6.1a6.5 6.5 0 0 1-1.9-1.2 7.4 7.4 0 0 1-1.3-1.6c-.1-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.1-.5l-.5-1.2c-.1-.4-.3-.7-.7-.7z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Oliver Midwifery Care. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
